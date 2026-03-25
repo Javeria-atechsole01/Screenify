@@ -1,0 +1,6 @@
+.resources-page { padding-top: 48px; padding-bottom: 48px; }
+.resources-header { margin-bottom: 16px; }
+.page-title { font-weight: 800; }
+.card-sub { color: var(--muted); }
+.resources-card-btn { margin: 16px; }
+@media (max-width: 600px) { .resources-card-btn { margin: 8px; } }

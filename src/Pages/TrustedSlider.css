@@ -1,0 +1,25 @@
+.trusted-container { width: 100%; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.trusted-container h1{ text-align: center; margin-bottom: 20px; margin-top: 70px; font-size: clamp(22px, 4vw, 36px); }
+
+.testimonial-box { display: flex; width: 100%; background: var(--surface); border-radius: 16px; padding: clamp(20px, 3vw, 40px); gap: clamp(16px, 3vw, 40px); box-shadow: 0 5px 18px rgba(0,0,0,.08); align-items: center; }
+.left-logo{ flex: 0 0 auto; }
+.left-logo img { width: clamp(80px, 10vw, 120px); height: auto; object-fit: contain; }
+.right-content { flex: 1; }
+
+.top-slider-info { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.top-slider-info span { font-size: clamp(.85rem, 1.8vw, .95rem); font-weight: 600; color: var(--muted); }
+.buttons button { background: #2d4060; color: white; border: none; padding: clamp(6px, 1.4vw, 10px) clamp(10px, 2vw, 14px); border-radius: 8px; margin-left: 8px; font-size: clamp(1rem, 2vw, 1.1rem); cursor: pointer; }
+
+.quote { font-size: clamp(1.1rem, 2.6vw, 1.6rem); margin-top: 12px; line-height: 1.6; font-weight: 400; }
+.name { margin-top: 16px; font-weight: 700; font-size: clamp(.9rem, 2vw, 1rem); }
+.role { font-size: clamp(.85rem, 1.8vw, .95rem); opacity: .7; }
+
+.company-strip { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 24px; align-items: center; }
+.brand-logo { width: 100%; max-width: 120px; justify-self: center; opacity: .35; transition: transform .2s ease, opacity .2s ease; cursor: pointer; }
+.brand-logo.active { opacity: 1; transform: scale(1.05); }
+.brand-logo:hover { opacity: .7; }
+
+@media (max-width: 1024px){ .testimonial-box{ padding: 28px; } }
+@media (max-width: 900px){ .testimonial-box{ flex-direction: column; text-align: center; } .left-logo img{ width: clamp(90px, 18vw, 130px); margin: 0 auto; } }
+@media (max-width: 640px){ .trusted-container{ padding: 0 16px; } .quote{ font-size: 1.2rem; } .company-strip{ grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 18px; } }
+@media (max-width: 420px){ .buttons button{ padding: 6px 10px; } .testimonial-box{ padding: 20px; gap: 16px; } .brand-logo{ max-width: 100px; } }

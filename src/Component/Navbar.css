@@ -1,0 +1,167 @@
+.nav-container {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  z-index: 1000;
+}
+.nav-spacer { height: 70px; }
+
+.brand { display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+ }
+.logo-img {
+  height: 55px;
+  width: 80px;
+  border-radius: 6px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-links a { text-decoration: none; color: var(--text); position: relative; }
+.nav-links li { position: relative; }
+.nav-links a::after, .nav-links li::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: #0a66ff; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; border-radius: 2px; }
+.nav-links a:hover::after, .nav-links li:hover::after { transform: scaleX(1); }
+
+.nav-links li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: var(--surface);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 180px;
+  z-index: 99;
+}
+
+.dropdown-menu a { margin: 0; cursor: pointer; padding: 5px; color: var(--text); text-decoration: none; border-radius: 6px; }
+.dropdown-menu a:hover { background: var(--hover); }
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+
+.try-btn {
+  background: #0a66ff;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+.try-btn:hover { background: #0052cc; box-shadow: 0 6px 16px rgba(0,82,204,.3); }
+
+.signin-btn {
+  background: transparent;
+  border: 1px solid #0a66ff;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0a66ff;
+  border-radius: 30px;
+  padding: 8px 18px;
+  display: inline-block;
+}
+.signin-btn:hover { background: rgba(0,82,204,.08); }
+
+/* Mobile */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: var(--surface);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.mobile-row { 
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    position: relative; }
+.mobile-row:hover { background: var(--hover); }
+.mobile-row::after { content:""; position:absolute; left:6px; right:6px; bottom:4px; height:2px; background:#0a66ff; transform:scaleX(0); transform-origin:left; transition:transform .25s ease; border-radius:2px; }
+.mobile-row:hover::after { transform:scaleX(1); }
+
+
+.mobile-dropdown a { padding-left: 18px; margin: 6px 0; font-size: 16px; color: var(--text); text-decoration: none; display: block; }
+
+.mobile-btn {
+  width: 50%;
+  margin-left: 60%;
+}
+.mobile-cta { border-radius: 999px; font-size: 16px; padding: 12px 22px; }
+.mobile-sign { text-align: right; font-weight: 700; }
+
+@media (max-width: 850px) {
+  .nav-links, .nav-right {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+  }
+  .nav-spacer { height: 68px; }
+}
+.theme-toggle{ 
+  display:inline-flex; align-items:center; justify-content:center;
+  width:36px; height:36px; border-radius:999px; margin-right:10px;
+  border:1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.theme-toggle:hover{ background: var(--hover); }

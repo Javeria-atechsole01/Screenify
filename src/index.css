@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg:#F4F5F7;
+  --surface:#FFFFFF;
+  --text:#172B4D;
+  --muted:#6B778C;
+  --border:#ECECEC;
+  --hover:#F6F7F9;
+}
+.dark-theme{
+  --bg:#0E1217;
+  --surface:#121722;
+  --text:#E5E7EB;
+  --muted:#CBD5E1;
+  --border:#2A2D32;
+  --hover:#1A2030;
+}
+
+html, body{ background: var(--bg); color: var(--text); }
+a{ color: var(--text); }
